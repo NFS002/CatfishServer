@@ -7,6 +7,13 @@ module.exports = {
         next();
     },
 
+    redirect_to_https: function (req, res, next) {
+        if (req.secure)
+           next();
+        else
+           res.redirect('https://' + req.headers.host + req.url);
+    },
+
     postCommentUri: '/postComment',
     postComment: function (req, res, next) {
         impl.postComment(req, res);
