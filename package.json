@@ -1,0 +1,30 @@
+{
+  "name": "catfishermanager",
+  "version": "0.0.2",
+  "author": "Noah Florin-Sefton.",
+  "description": "Reviews and feedback for Tindr profiles",
+  "homepage": "https://github.com/NFS002/Catfish-Manager",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NFS002/Catfish-Manager.git"
+  },
+  "bugs": "https://github.com/NFS002/Catfish-Manager/issues",
+  "contributors": [
+    {
+      "name": "Noah FS",
+      "email": "nflorins002@gmail.com"
+    }
+  ],
+  "scripts": {
+    "serve": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "4.16",
+    "mongodb": "^3.5.5"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "license": "BSD-3-Clause"
+}
