@@ -1,6 +1,4 @@
 var MongoClient = require('mongodb').MongoClient;
-var url = 'mongodb+srv://catfish:egz0mtyuj5mFx54d@cluster0-5rdbf.mongodb.net/test?retryWrites=true&w=majority';
-
 
 var options = {
     numberOfRetries : 5,
@@ -14,7 +12,7 @@ function MongoPool(){}
 var p_db;
 
 MongoPool.initPool = function(cb){
-  MongoClient.connect(url, options, function(err, db) {
+  MongoClient.connect(process.env.MONGO_URL, options, function(err, db) {
     if (err) throw err;
     else console.log("Connected to database")
     p_db = db.db('catfishdb')
